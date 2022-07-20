@@ -15,7 +15,6 @@ export let user = [
 
 
 let postion = 0;
-
 let user_root = document.querySelector ('#root');
 
 
@@ -45,4 +44,14 @@ document.getElementById('boton-derecha').addEventListener('click', mover_derecha
 document.getElementById('boton-izquierda').addEventListener('click', mover_izquierda);
 
 
-user_root.innerHTML = '<h1>' + user_bj[0].name + '</h1>';
+
+function mostrar_usuario(){
+    user_root.innerHTML = '<h1>' + user_bj[postion].nikname + '</h1>' + 
+    '<h1>' + user_bj[postion].name + '</h1>' +
+    '<h1>' + user_bj[postion].adress + '</h1>' + 
+    '<h1>' + user_bj[postion].email + '</h1>' + 
+    '<h1>' + user_bj[postion].phone + '</h1>';
+};
+
+
+document.getElementById('ver').addEventListener('click', mostrar_usuario);
